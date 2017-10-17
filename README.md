@@ -7,7 +7,11 @@ An Aaganwadi App to track attendance,immunization and nutrition services provide
 * AWC records on paper turn out to be fake or forged.
 * More manual labour, less automation hence error prone.
 
+<br> <br> 
+
 ![Alt text](/rajkoy.png?raw=true "Optional Title")
+
+<br> <br>
 
 
 ## Our Solution 
