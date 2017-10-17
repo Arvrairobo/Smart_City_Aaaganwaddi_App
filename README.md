@@ -1,4 +1,4 @@
-# Smart_City_Aaaganwaddi_App
+# Smart City Aaaganwaddi App
 An Aaganwadi App to track attendance,immunization and nutrition services provided to Aaganwadi kids
 
 ## Current Scenario
@@ -7,7 +7,7 @@ An Aaganwadi App to track attendance,immunization and nutrition services provide
 * AWC records on paper turn out to be fake or forged.
 * More manual labour, less automation hence error prone.
 
-![Alt text](/rajkoy.jpg?raw=true "Optional Title")
+![Alt text](/rajkoy.png?raw=true "Optional Title")
 
 
 ## Our Solution 
@@ -69,8 +69,8 @@ Depending on these statictics we can control the next month supply of food packe
 ## Contributors :
 <a href="https://github.com/Vella-Contributor" target="_blank">Shivam Singh </a> <br>
 <a href="https://github.com/NehaJeevan" target="_blank">Neha Jeevan </a>  <br>
-<a href="" target="_blank">Sudhnashu Joshi </a>  <br>
-<a href="" target="_blank">Utkarsh </a> <br>
+<a href="https://github.com/SJoshi7" target="_blank">Sudhnashu Joshi </a>  <br>
+<a href="https://github.com/UtkarshMishra0511" target="_blank">Utkarsh </a> <br>
 
 
 ## Copyright and license
