@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript">
+  var arrLang = {
+  'en':{
+    'home': 'Home',
+    'leader board':'Leader Board',
+    'about': 'About',
+    'contact': 'Contact',
+    'choose your aanganwadi':'Choose your Anganwadi',
+    'submit': 'SUBMIT',
+    'attendance': 'Attendance',
+    'check supplies': 'Check Supplies',
+    'growth statistics': 'Growth Statistics',
+    'immunization': 'Immunization',
+    'name':'Name',
+    'student id': 'Student ID',
+    'date of immunization':'Date of Immunization',
+    'item': 'Item',
+    'date':'Date',
+    'qr code':'QR Code',
+
+    'scan qr code':'Scan QR Code',
+    'nutrition level':'Nutrition Level',
+    'enroll new student':'Enroll New Student',
+    'Login':'LOGIN',
+    'Biometric login':'BIOMETRIC LOGIN',
+    'password':'Password',
+    'Click me and tap fingerprint sensor':'CLICK ME AND TAP FINGERPRINT SENSOR',
+    'Scan qr code for supplies': 'SCAN QR CODE FOR SUPPLIES',
+    'Scan qr code': 'SCAN QR CODE',
+    'description':'Description',
+    'date of immunization':'Date of Immunization',
+    'Take fingerprint to submit':'TAKE FINGERPRINT TO SUBMIT',
+    'enter height':'Enter Height',
+    'enter weight':'Enter Weight',
+    'enter current age':'Enter Current Age',
+    'date of reading':'Date of Reading',
+    'nutrition':'NUTRITION',
+    'addhar id':'Addhar ID',
+    'user name':'User Name',
+    'dob':'Date of Birth',
+    'Take finger print to enroll':'TAKE FINGER PRINT TO ENROLL',
+    'or':'OR',
+    'Balwadi Anganwadi Kendra':'Balwadi Anganwadi Kendra',
+
+
+    'seema tiwari':'Seema Tiwari',
+    'neetu kumari':'Neetu Kumari',
+    'jyotika rawat':'Jyotika Rawat',
+    'mridula chandola':'Mridula Chandola',
+    'meena kumari':'Meena Kumari',
+    'points':'Points'
+
+
+  },
+
+  'guj':{
+    'home': 'હોમ',
+    'leader board':'રેન્કિંગ',
+    'about': 'વિશે',
+    'contact': 'સંપર્ક કરો',
+    'choose your aanganwadi':'તમારી આંગણવાડી પસંદ કરો',
+    'submit': 'સબમિટ કરો',
+    'attendance': 'હાજરી',
+    'check supplies': 'પુરવઠા તપાસો',
+    'growth statistics': 'વિકાસ આંકડા',
+    'immunization': 'રોગપ્રતિરક્ષા',
+    'name':'નામ',
+    'student id': 'વિદ્યાર્થી ID',
+    'date of immunization':'રોગપ્રતિરક્ષાની તારીખ',
+    'item': 'આઇટમ',
+    'user name': 'વપરાશકર્તા નામ',
+    'date':'તારીખ',
+    'qr code':'QR કોડ',
+  'scan qr code':'સ્કેન QR કોડ',
+    'nutrition level':'પોષણ સ્તર',
+    'enroll new student':'નવા વિદ્યાર્થીની નોંધણી કરો',
+    'Login':'લૉગિન',
+    'Biometric login':'બાયોમેટ્રિક લોગિન',
+    'password':'પાસવર્ડ',
+    'Click me and tap fingerprint sensor':'મને અને ટેપ ફિંગરપ્રિન્ટ સેન્સરને ક્લિક કરો',
+    'Scan qr code for supplies': 'પુરવઠા માટે સ્કેન QR કોડ',
+    'Scan qr code': 'QR કોડ સ્કેન કરો',
+    'description':'વર્ણન',
+    'date of immunization':'રોગપ્રતિરક્ષાની તારીખ',
+    'Take fingerprint to submit':'સબમિટ કરવા માટે ફિંગરપ્રિંટ લો',
+    'enter height':'ઊંચાઈ દાખલ કરો',
+    'enter weight':'વજન દાખલ કરો',
+    'enter current age':'વર્તમાન ઉંમર દાખલ કરો',
+    'date of reading':'વાંચનની તારીખ',
+    'nutrition':'પોષણ',
+    'addhar id':'આધાર આઈડી',
+    'dob':'જન્મ તારીખ',
+    'Take fingerprint to enroll':'ફીંગરને પ્રવેશવા માટે પ્રિન્ટ કરો',
+    'or':'અથવા',
+    'Balwadi Anganwadi Kendra':'બલવાડી આંગણવાડી કેન્દ્ર',
+    'seema tiwari':'સીમા તિવારી',
+    'neetu kumari':'નીતુ કુમારી',
+    'jyotika rawat':'જ્યોતિકા રાવત',
+    'mridula chandola':'મૃદુલા ચંદોલા',
+    'meena kumari':'મીના કુમારી',
+    'points':'માર્ક'
+
+  }
+};
+
+$(function(){
+  $('.translate').click(function(){
+    var lang= $(this).attr('id');
+
+    $('.lang').each(function(index, element){
+      $(this).text(arrLang[lang][$(this).attr('key')]);
+    })
+  })
+});
+
+</script>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" href="css/mate_icon.css">
+
+
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div id="main_screen">
+          <div class="app">
+              <h1>Apache Cordova</h1>
+              <div id="deviceready" class="blink">
+                  <p class="event listening">Connecting to Device</p>
+                  <p class="event received">Device is Ready</p>
+              </div>
+          </div>
+       </div>
+
+       <div id="my_first_screen">
+
+       </div>
+
+
+     <div id="login_screen">
+
+
+         <br><br><br><br><br><br><br><br><br><br>
+         <div class="row">
+           <div class="input-field col s8 offset-s2">
+             <i class="material-icons prefix" style="color: white">account_circle</i>
+             <input id="input_aaganwadi_user_name" type="text" class="validate">
+             <label for="input_aaganwadi__user_name" style="color: white" class="lang" key="user name">User Name</label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="input-field col s8 offset-s2">
+             <i class="material-icons prefix" style="color: white">vpn_keys</i>
+             <input id="hey_there" type="password" class="validate">
+             <label for="hey_there" style="color: white" class="lang" key="password">Password</label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col s12 center">
+           <a class="waves-effect waves-light btn lang" onclick="tryThis()" key="Login">LOGIN</a>
+         </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 center">
+            <p style="color: white" class="lang" key="or">OR</p>
+         </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 center">
+            <a class="waves-effect waves-light btn lang" key="Biometric login" onclick="login_authorisation_with_fingerprint()">BIOMETRIC LOGIN</a>
+          </div>
+        </div>
+     </div>
+
+     <div id="screen_2">
+       <nav class="nav-extended">
+          <div class="nav-wrapper " style="background-color: #ffc400">
+              <a href="#!" class="brand-logo center"><i class="large material-icons">child_care</i>Sunshine </a>
+              <ul class="left">
+                <li><a data-activates="slide-out" class="button-collapse" href="#" style="margin-right: 0px;margin-left: 0px;"><i class="large material-icons">menu</i></a></li>
+              </ul>
+              <ul class="right">
+                <li><a href="#"><i class="large material-icons">notifications</i></a></li>
+                <li><a href="#"><i class="large material-icons">supervisor_account</i></a></li>
+              </ul>
+              <ul class="tabs tabs-transparent">
+                <a href="#!" class="brand-logo left"  style="margin-right: 0px;left: 40px;bottom: -4;"><i class="tiny material-icons">location_on</i></a>
+                <li class="tab center-text left"><a id="change_text" class="active waves-effect waves-yellow " href="#test1">Balwadi Anganwadi Kendra</a></li>
+              </ul>
+          </div>
+        </nav>
+
+        <div id="test1">
+
+        <ul class="collapsible  " data-collapsible="accordion">
+
+            <li  id= "attendance_system_btn"  class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/list.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="attendance">Attendance<br></span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="qr_code_scanner_btn" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/qr.png" alt="" class="circle">
+
+                                  <span class="title lang" style="font-size:4.5vw" key="scan qr code">Scan QR Code<br></span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="immunization_btn" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/health.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="immunization">Immunization <br></span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="nutrition_level" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                  <br>
+                                 <img src="img/nutrition.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="nutrition level">Nutrition Level <br></span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="enroll_new_button" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/add.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="enroll new student">Enroll New Student<br></span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="see_your_leaderboard" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/add.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="leader board">Leader Board<br></span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+          </ul>
+
+
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+
+
+
+
+           <!-- <div class="row" >
+             <div id="attendance_system_btn" class="col s4 offset-s1 center my_box" >
+                 <i class="large material-icons" style="color:black"  >assignment_ind</i> <br>
+                 Attendance
+             </div>
+             <div id="qr_code_scanner_btn" class="col s4 offset-s2 center my_box ">
+               <i class="large material-icons" style="color:black" >scanner</i> <br>
+               Scan QR Code
+             </div>
+           </div>
+
+            <div class="row"> <br> <br>
+             <div id="immunization_btn" class="col s4 offset-s1 center my_box ">
+               <i class="large material-icons" style="color:black"  >local_hospital</i> <br>
+               Immunization
+             </div>
+
+             <div  id="nutrition_level" class="col s4 offset-s2 center my_box ">
+               <i class="large material-icons" style="color:black"  >trending_up</i> <br>
+                Nutrtion Level
+             </div>
+           </div>
+
+           <div class="row"> <br>
+             <div id="enroll_new_button"class="col s6 offset-s3 center my_box ">
+               <i class="large material-icons" style="color:black"  >face</i> <br>
+               Enroll New Student
+             </div>
+          </div>
+        -->
+          <div class="row" style="padding-top: 15px;padding-bottom: 15px;margin-bottom:0px; background-color: #ffc400">
+            <div class="col s2 offset-s2">
+               <a href="#!"><i class="translate" style="color: white" id="guj">ગુજરાતી</i></a>
+            </div>
+
+            <div class="col s2 offset-s1 ">
+               <a href="#!"><i class="translate" style="color: white" id="en">English</i></a>
+            </div>
+
+            <div class="col s2 offset-s1 ">
+               <a href="#!"><i class="small material-icons" style="color: white">help</i></a>
+            </div>
+         </div>
+     </div>
+    </div>
+
+    <div id="attendance_screen">
+      <nav class="nav-extended">
+         <div class="nav-wrapper " style="background-color: #ffc400" >
+             <a href="#!" class="brand-logo center"><i class="large material-icons">child_care</i>Sunshine </a>
+             <ul class="left">
+               <li><a id="go_back_main_menu_from_attendance_screen" href="#" style="margin-right: 0px;margin-left: 0px;"><i class="large material-icons">arrow_back</i></a></li>
+             </ul>
+             <ul class="right">
+               <li><a href="#"><i class="large material-icons">notifications</i></a></li>
+               <li><a href="#"><i class="large material-icons">supervisor_account</i></a></li>
+             </ul>
+             <ul class="tabs tabs-transparent">
+               <a href="#!" class="brand-logo left"  style="margin-right: 0px;left: 40px;bottom: -4;"><i class="tiny material-icons">assignment_ind</i></a>
+               <li class="tab center-text left lang" key="attendance"><a class="active waves-effect waves-yellow " href="#test3">Attendance</a></li>
+             </ul>
+         </div>
+       </nav>
+
+       <div class="row" id="test3"> <br> <br> <br> <br><br> <br>
+         <div class="col s12 center">
+           <!-- <i class="large material-icons">touch_app</i> -->
+           <img src="img/list.png">
+         </div>
+         <div class='col s12 center'> <br> <br>
+           <a class="waves-effect waves-light btn lang" key="Click me and tap fingerprint sensor" onclick="callFingerPrint()">Click Me and Tap Fingerprint Sensor </a>
+        </div>
+
+        <div id="hey">
+        </div>
+       </div>
+       <br><br><br><br><br><br><br><br><br>
+       <div class="row" style="padding-top: 17px;padding-bottom: 10px;margin-bottom:0px; background-color: #ffc400">
+         <div class="col s2 offset-s2">
+            <a href="#!"><i class="translate" style="color: white" id="guj">ગુજરાતી</i></a>
+         </div>
+
+         <div class="col s2 offset-s1 ">
+            <a href="#!"><i class="translate" style="color: white" id="en">English</i></a>
+         </div>
+
+         <div class="col s2 offset-s1 ">
+            <a href="#!"><i class="small material-icons" style="color: white">help</i></a>
+         </div>
+      </div>
+    </div>
+
+    <div id="qr_code_scan_screen">
+      <nav class="nav-extended">
+         <div class="nav-wrapper " style="background-color: #ffc400">
+             <a href="#!" class="brand-logo center"><i class="large material-icons">child_care</i>Sunshine </a>
+             <ul class="left">
+               <li><a id="go_back_main_screen_from_qr_code" href="#" style="margin-right: 0px;margin-left: 0px;"><i class="large material-icons">arrow_back</i></a></li>
+             </ul>
+             <ul class="right">
+               <li><a href="#"><i class="large material-icons">notifications</i></a></li>
+               <li><a href="#"><i class="large material-icons">supervisor_account</i></a></li>
+             </ul>
+             <ul class="tabs tabs-transparent">
+               <a href="#!" class="brand-logo left"  style="margin-right: 0px;left: 40px;bottom: -4;"><i class="tiny material-icons">code</i></a>
+               <li class="tab center-text left"><a class="active waves-effect waves-yellow lang" key="Scan qr code for supplies" href="#test4">Scan QR code for Supplies</a></li>
+             </ul>
+         </div>
+       </nav>
+       <div class="row" id="test4"> <br> <br> <br> <br><br> <br> <br>
+         <div class="col s12 center">
+           <!-- <i class="large material-icons">enhanced_encryption</i> -->
+           <img src="img/qr.png">
+         </div>
+
+          <!-- <div class="input-field col s8 offset-s2">
+            <input id="date_of_scanning_qr_code" type="text" class="datepicker">
+            <label for="date_of_scanning_qr_code">Date of Supply</label>
+          </div> -->
+
+         <div class='col s12 center'> <br> <br>
+           <a class="waves-effect waves-light btn lang" onclick="get_geo_location()" key="Scan qr code">SCAN QR CODE</a>
+        </div>
+        <br> <br>
+        <div class="input-field col s6 offset-s3">
+          <input id="qr_code_after_scan_value" type="text" class="validate">
+          <label for="qr_code_after_scan_value"></label>
+        </div>
+     </div>
+
+<br><br><br><br>
+       <div class="row" style="padding-top: 17px;padding-bottom: 10px;margin-bottom:0px; background-color: #ffc400">
+         <div class="col s2 offset-s2">
+            <a href="#!"><i class="translate" style="color: white" id="guj">ગુજરાતી</i></a>
+         </div>
+
+         <div class="col s2 offset-s1 ">
+            <a href="#!"><i class="translate" style="color: white" id="en">English</i></a>
+         </div>
+
+         <div class="col s2 offset-s1 ">
+            <a href="#!"><i class="small material-icons" style="color: white">help</i></a>
+         </div>
+      </div>
+   </div>
+
+   <div id="immnization__screen">
+   <nav class="nav-extended">
+      <div class="nav-wrapper" style="background-color: #ffc400">
+          <a href="#!" class="brand-logo center"><i class="large material-icons">child_care</i>Sunshine </a>
+          <ul class="left">
+            <li><a id="go_back_main_screen_from_immunization" href="#" style="margin-right: 0px;margin-left: 0px;"><i class="large material-icons">arrow_back</i></a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="#"><i class="large material-icons">notifications</i></a></li>
+            <li><a href="#"><i class="large material-icons">supervisor_account</i></a></li>
+          </ul>
+          <ul class="tabs tabs-transparent">
+            <a href="#!" class="brand-logo left"  style="margin-right: 0px;left: 40px;bottom: -4;"><i class="tiny material-icons">local_hospital</i></a>
+            <li class="tab center-text left"><a class="active waves-effect waves-yellow lang" key="immunization" href="#test5">Immunization</a></li>
+          </ul>
+      </div>
+    </nav>
+    <div class="row" id="test5"> <br> <br>
+        <div class="input-field col s8 offset-s2"> <br>
+           <i class="material-icons prefix">contacts</i>
+           <input id="input_description_immunization" type="text" class="validate">
+           <label for="input_description_immunization" class="lang" key="description">Desciption<label>
+        </div>
+
+         <div class='col s12 center'> <br><br>
+           <a id="cameraTakePicture" class="waves-effect waves-light btn lang" key="Take fingerprint to submit"><i class="medium material-icons">fingerprint</i> Take Fingerprint To Submit </a>
+           <br> <br>
+         </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="row" style="padding-top: 10px;padding-bottom: 14px;margin-bottom:0px; background-color: #ffc400">
+      <div class="col s2 offset-s2">
+         <a href="#!"><i class="translate" style="color: white" id="guj">ગુજરાતી</i></a>
+      </div>
+
+      <div class="col s2 offset-s1 ">
+         <a href="#!"><i class="translate" style="color: white" id="en">English</i></a>
+      </div>
+
+      <div class="col s2 offset-s1 ">
+         <a href="#!"><i class="small material-icons" style="color: white">help</i></a>
+      </div>
+   </div>
+
+
+ </div>
+
+ <div id="nutrition_level__screen">
+   <nav class="nav-extended">
+      <div class="nav-wrapper " style="background-color: #ffc400">
+          <a href="#!"  class="brand-logo center"><i class="large material-icons">child_care</i>Sunshine </a>
+          <ul class="left">
+            <li><a id="go_back_main_screen_from_nutrition_screen" href="#" style="margin-right: 0px;margin-left: 0px;"><i class="large material-icons">arrow_back</i></a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="#"><i class="large material-icons">notifications</i></a></li>
+            <li><a href="#"><i class="large material-icons">supervisor_account</i></a></li>
+          </ul>
+          <ul class="tabs tabs-transparent">
+            <a href="#!" class="brand-logo left"  style="margin-right: 0px;left: 40px;bottom: -4;"><i class="tiny material-icons">trending_up</i></a>
+            <li class="tab center-text left lang" key="nutrition"><a class="active waves-effect waves-yellow" href="#test6">Nutrition</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <div class="row" id="test6"> <br> <br>
+      <div class="input-field col s8 offset-s2">
+         <i class="material-icons prefix">vertical_align_top</i>
+         <input id="input_height" type="text" class="validate">
+         <label for="input_height" class="lang" key="enter height">Enter Height<label>
+      </div>
+
+      <div class="input-field col s8 offset-s2">
+         <i class="material-icons prefix">person_pin</i>
+         <input id="input_weight" type="text" class="validate">
+         <label for="input_weight" class="lang" key="enter weight">Enter Weight<label>
+      </div>
+
+      <div class="input-field col s8 offset-s2">
+         <i class="material-icons prefix">sentiment_satisfied</i>
+         <input id="input_current_age" type="text" class="validate">
+         <label for="input_current_age" class="lang" key="enter current age">Enter Current Age<label>
+      </div>
+
+      <div class="input-field col s8 offset-s2">
+         <i class="material-icons prefix">sentiment_satisfied</i>
+         <input id="input_waist_size" type="text" class="validate">
+         <label for="input_waist_size" class="lang" key="enter current age">Waist Size<label>
+      </div>
+
+       <div class='col s12 center'> <br>
+         <a class="waves-effect waves-light btn lang" key="Take fingerprint to submit" onclick="nutrition_level_frontend_submit()"><i class="medium material-icons">fingerprint</i> Take Fingerprint To Submit </a>
+         <br> <br>
+      </div>
+    </div>
+
+    <br>  <br> <br><br><br>
+    <div class="row" style="padding-top: 20px;padding-bottom: 15px;margin-bottom:0px; background-color: #ffc400">
+      <div class="col s2 offset-s2">
+         <a href="#!"><i class="translate" style="color: white" id="guj">ગુજરાતી</i></a>
+      </div>
+
+      <div class="col s2 offset-s1 ">
+         <a href="#!"><i class="translate" style="color: white" id="en">English</i></a>
+      </div>
+
+      <div class="col s2 offset-s1 ">
+         <a href="#!"><i class="small material-icons" style="color: white">help</i></a>
+      </div>
+   </div>
+
+ </div>
+
+
+
+<!-- leader board here -->
+<div class="row" id="leader_board">
+	<div col s12>
+		 <nav class="nav-extended">
+         <div class="nav-wrapper " style="background-color: #ffc400">
+             <a href="#!" class="brand-logo center"><i class="large material-icons">child_care</i>Sunshine </a>
+             <ul class="left">
+               <li><a id="go_back_leaderboard_to_screen" href="#" style="margin-right: 0px;margin-left: 0px;"><i class="large material-icons">arrow_back</i></a></li>
+             </ul>
+             <ul class="right">
+               <li><a href="#"><i class="large material-icons">notifications</i></a></li>
+               <li><a href="#"><i class="large material-icons">supervisor_account</i></a></li>
+             </ul>
+             <ul class="tabs tabs-transparent">
+               <a href="#!" class="brand-logo left"  style="margin-right: 0px;left: 40px;bottom: -4;"><i class="tiny material-icons">code</i></a>
+               <li class="tab center-text left"><a class="active waves-effect waves-yellow lang" key="leader board" href="#test4">Leader Board</a></li>
+             </ul>
+         </div>
+       </nav>
+	</div>
+
+	<div col s12>
+		<div id="test2">
+
+        <ul class="collapsible " data-collapsible="accordion">
+
+            <li  id= "attendance_system_btn"  class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/1.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="neetu kumari" key>Neetu Kumari<br><br>Points: 92</span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="qr_code_scanner_btn" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/2.png" alt="" class="circle">
+
+                                  <span class="title lang" style="font-size:4.5vw" key="jyotika rawat">Jyotika rawat<br><br>Points: 89</span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="immunization_btn" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/3.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="seema tiwari">Seema Tiwari<br><br>Points: 78</span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="nutrition_level" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                  <br>
+                                 <img src="img/other.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="mridula chandola">Mridula Chandola <br><br><br>Points: 75</span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+
+            <li id="enroll_new_button" class="animated slideInUp ">
+            <div class="collapsible-header ">
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+               <div class="row">
+                <div class="col s12 m6">
+                  <div class="main_color">
+
+                        <ul class="collection " style="margin-top: 0px;margin-bottom: 0px;">
+
+                              <li class="collection-item avatar" style="color:#14405c">
+                                <br>
+                                 <img src="img/other.png" alt="" class="circle">
+
+                                <span class="title lang" style="font-size:4.5vw" key="meena kumari">Meena Kumari<br><br>Points: 70</span>
+
+                                  </li>
+
+                      </ul>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            </li>
+          </ul>
+
+
+
+        <!--      <img src="easy2.png" alt="" class="circle" style="">
+             HDFC Life Easy Health Plan
+ -->
+
+
+
+
+
+           <!-- <div class="row" >
+             <div id="attendance_system_btn" class="col s4 offset-s1 center my_box" >
+                 <i class="large material-icons" style="color:black"  >assignment_ind</i> <br>
+                 Attendance
+             </div>
+             <div id="qr_code_scanner_btn" class="col s4 offset-s2 center my_box ">
+               <i class="large material-icons" style="color:black" >scanner</i> <br>
+               Scan QR Code
+             </div>
+           </div>
+
+            <div class="row"> <br> <br>
+             <div id="immunization_btn" class="col s4 offset-s1 center my_box ">
+               <i class="large material-icons" style="color:black"  >local_hospital</i> <br>
+               Immunization
+             </div>
+
+             <div  id="nutrition_level" class="col s4 offset-s2 center my_box ">
+               <i class="large material-icons" style="color:black"  >trending_up</i> <br>
+                Nutrtion Level
+             </div>
+           </div>
+
+           <div class="row"> <br>
+             <div id="enroll_new_button"class="col s6 offset-s3 center my_box ">
+               <i class="large material-icons" style="color:black"  >face</i> <br>
+               Enroll New Student
+             </div>
+          </div>
+        -->
+          <div class="row" style="padding-top: 15px;padding-bottom: 15px;margin-bottom:0px; background-color: #ffc400">
+            <div class="col s2 offset-s2">
+               <a href="#!"><i class="translate" style="color: white" id="guj">ગુજરાતી</i></a>
+            </div>
+
+            <div class="col s2 offset-s1 ">
+               <a href="#!"><i class="translate" style="color: white" id="en">English</i></a>
+            </div>
+
+            <div class="col s2 offset-s1 ">
+               <a href="#!"><i class="small material-icons" style="color: white">help</i></a>
+            </div>
+         </div>
+     </div>
+    </div>
+
+	</div>
+</div>
+
+<!-- leader board till here  -->
+
+
+   <div id="new_student_enroll__screen">
+
+   <nav class="nav-extended">
+      <div class="nav-wrapper" style="background-color: #ffc400">
+          <a href="#!" class="brand-logo center"><i class="large material-icons">child_care</i>Sunshine </a>
+          <ul class="left">
+            <li><a id="go_back_main_screen_from_new_stud" href="#" style="margin-right: 0px;margin-left: 0px;"><i class="large material-icons">arrow_back</i></a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="#"><i class="large material-icons">notifications</i></a></li>
+            <li><a href="#"><i class="large material-icons">supervisor_account</i></a></li>
+          </ul>
+          <ul class="tabs tabs-transparent">
+            <a href="#!" class="brand-logo left"  style="margin-right: 0px;left: 40px;bottom: -4;"><i class="tiny material-icons">content_paste</i></a>
+            <li class="tab center-text left lang" key="enter student details"><a class="active waves-effect waves-yellow " href="#test2">Enter Student Details</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <div class="row" id="test2"> <br>
+         <div class="input-field col s8 offset-s2">
+           <i class="material-icons prefix">account_circle</i>
+           <input id="new_student_enroll_input" type="text" class="validate">
+           <label for="new_student_enroll_input" class="lang" key="name">Name</label>
+         </div>
+
+         <div class="input-field col s8 offset-s2">
+            <i class="material-icons prefix lang">contacts</i>
+            <input id="new_aadhar_id_input" type="tel" class="validate">
+            <label for="new_aadhar_id_input" class="lang" key="addhar id">Addhar ID<label>
+        </div>
+
+
+        <div class="input-field col s8 offset-s2">
+            <input id="new_date_of_birth_input" type="text" class="datepicker">
+            <label for="new_date_of_birth_input" class="lang" key="dob">Date of Birth</label>
+        </div>
+
+<!--
+        <div class="input-field col s9 offset-s1">
+          <i class="material-icons prefix">home</i>
+          <textarea id="new_student_input_address" class="materialize-textarea"></textarea>
+          <label for="icon_prefix2">Address</label>
+        </div> -->
+
+      <div class='col s12 center'> <br> <br>
+        <a class="waves-effect waves-light btn lang" key="Take fingerprint to enroll" onclick="take_atttendance_frontend_connect()" >TAKE FINGER PRINT TO ENROLL </a>
+     </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="row" style="padding-top: 10px;padding-bottom: 10px;margin-bottom:0px; background-color: #ffc400">
+      <div class="col s2 offset-s2">
+         <a href="#!"><i class="translate" style="color: white" id="guj">ગુજરાતી</i></a>
+      </div>
+
+      <div class="col s2 offset-s1 ">
+         <a href="#!"><i class="translate" style="color: white" id="en">English</i></a>
+      </div>
+
+      <div class="col s2 offset-s1 ">
+         <a href="#!"><i class="small material-icons" style="color: white">help</i></a>
+      </div>
+   </div>
+ </div>
+
+
+
+
+      <!-- <div id="new" style="display:none" >
+       <input id="input_aaganwadi_user_name" type="text">
+       <input id="hey_there" type="text">
+
+       <div id="hitting"> </div>
+       <button onclick="hit_me_please()">Click Me </button>
+     </div> -->
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type='text/javascript' src="js/jquery.min.js"> </script>
+        <script type="text/javascript" src="js/ajax.js"></script>
+        <script type="text/javascript" src="js/materialize.js"> </script>
+
+        <script>
+        $("#attendance_system_btn").click(function(){
+          console.log("hello");
+          $('#attendance_screen').css('display','block');
+          $('#screen_2').css('display','none');
+        })
+
+        $('#go_back_main_menu_from_attendance_screen').click(function(){
+          console.log('hello');
+          $('#attendance_screen').css('display','none');
+          $('#screen_2').css('display','block');
+        })
+
+        $('#qr_code_scanner_btn').click(function(){
+          console.log("hello");
+          $('#screen_2').css('display','none');
+          $('#qr_code_scan_screen').css('display','block');
+        })
+
+        $('#go_back_main_screen_from_qr_code').click(function(){
+          console.log("hello");
+          $('#screen_2').css('display','block');
+          $('#qr_code_scan_screen').css('display','none');
+        })
+
+
+        $("#immunization_btn").click(function(){
+          console.log('hello');
+          $('#screen_2').css('display','none');
+          $('#immnization__screen').css('display','block');
+        })
+
+        $("#see_your_leaderboard").click(function(){
+          console.log("hello");
+          $("#screen_2").css('display','none');
+          $('#leader_board').css('display','block');
+        });
+
+        $("#go_back_leaderboard_to_screen").click(function(){
+          $("#screen_2").css('display','block');
+          $('#leader_board').css('display','none');
+        })
+
+        $('#go_back_main_screen_from_immunization').click(function(){
+          console.log('hello');
+          $('#screen_2').css('display','block');
+          $('#immnization__screen').css('display','none');
+        })
+
+        $('#nutrition_level').click(function(){
+          $('#nutrition_level__screen').css('display','block');
+          $('#screen_2').css('display','none');
+        })
+
+        $('#go_back_main_screen_from_nutrition_screen').click(function(){
+          $('#nutrition_level__screen').css('display','none');
+          $('#screen_2').css('display','block');
+        })
+
+        $('#enroll_new_button').click(function(){
+          $('#new_student_enroll__screen').css('display','block');
+          $('#screen_2').css('display','none');
+        })
+
+        $('#go_back_main_screen_from_new_stud').click(function(){
+          $('#new_student_enroll__screen').css('display','none');
+          $('#screen_2').css('display','block');
+        });
+
+        </script>
+
+        <script type="text/javascript">
+
+        var encryptConfig = {
+            clientId: "myAppName",
+            username: "currentUser",
+            password: "currentUserPassword",
+            maxAttempts: 5,
+            locale: "en_US",
+            dialogTitle: "Hey dude, your finger",
+            dialogMessage: "Put your finger on the device",
+            dialogHint: "No one will steal your identity, promised"
+        };
+
+            var Handlers = {
+                fingerprintAvailable: function(result){
+                    document.getElementById('hey').append = "FingerprintAuth available: " + JSON.stringify(result);
+
+                    if (result.isAvailable) {
+                        FingerprintAuth.encrypt(encryptConfig, Handlers.encryptSuccess, Handlers.encryptError);
+                    }
+                },
+                fingerprintUnavailable: function(message){
+                    document.getElementById('hey').append = "isAvailableError(): " + message;
+                },
+                encryptSuccess: function(result){
+                    console.log("successCallback(): " + JSON.stringify(result));
+
+                    if (result.withFingerprint) {
+                        document.getElementById('hey').append = "Successfully encrypted credentials.";
+                        document.getElementById('hey').append="Encrypted credentials: " + result.token;
+                        get_me_all_the_students();
+                    } else if (result.withBackup) {
+                        document.getElementById('hey').append = "Authenticated with backup password";
+                    }
+                },
+                encryptError: function(error){
+                    if (error === FingerprintAuth.ERRORS.FINGERPRINT_CANCELLED) {
+                        document.getElementById('hey').append = "FingerprintAuth Dialog Cancelled!";
+                    } else {
+                        document.getElementById('hey').append = "FingerprintAuth Error: " + error;
+                    }
+                }
+            }
+
+            function callFingerPrint()
+            {      FingerprintAuth.isAvailable(Handlers.fingerprintAvailable, Handlers.fingerprintUnavailable);
+            }
+
+        </script>
+
+        <script>
+
+        function get_geo_location()
+        {
+
+              var onSuccess = function(position) {
+
+               if(position.coords.latitude!=null)
+               {
+                 get_me_the_latitude_and_longi(position);
+                              //alert(position.coords.latitude);
+               }
+               else {
+                 alert('Geolocation not found');
+               }
+
+            /*   alert('Latitude: '          + position.coords.latitude          + '\n' +
+                     'Longitude: '         + position.coords.longitude         + '\n' +
+                     'Altitude: '          + position.coords.altitude          + '\n' +
+                     'Accuracy: '          + position.coords.accuracy          + '\n' +
+                     'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+                     'Heading: '           + position.coords.heading           + '\n' +
+                     'Speed: '             + position.coords.speed             + '\n' +
+                     'Timestamp: '         + position.timestamp                + '\n');*/
+             };
+
+     // onError Callback receives a PositionError object
+     //
+           function onError(error) {
+               alert('code: '    + error.code    + '\n' +
+                     'message: ' + error.message + '\n');
+            }
+
+              navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+        }
+
+        function callBio()
+        {
+          cordova.plugins.barcodeScanner.scan(
+          function (result) {
+          if(!result.cancelled){
+                         // In this case we only want to process QR Codes
+           if(result.format == "QR_CODE"){
+                var decoded_data = result.text;
+                document.getElementById("qr_code_after_scan_value").value=decoded_data;
+                qr_code_scan_input();
+                        // This is the retrieved content of the qr code
+
+           }else{
+                      alert("Sorry, only qr codes this time ;)");
+                   }
+    }else{
+              alert("The user has dismissed the scan");
+            }
+    },
+      function (error) {
+      alert("An error ocurred: " + error);
+    },{
+      preferFrontCamera : true, // iOS and Android
+      showFlipCameraButton : true, // iOS and Android
+      showTorchButton : true, // iOS and Android
+      torchOn: true, // Android, launch with the torch switched on (if available)
+      saveHistory: true, // Android, save scan history (default false)
+      prompt : "Place a barcode inside the scan area", // Android
+      resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
+      formats : "QR_CODE,PDF_417", // default: all but PDF_417 and RSS_EXPANDED
+      orientation : "default", // Android only (portrait|landscape), default unset so it rotates with the device
+      disableAnimations : true, // iOS
+      disableSuccessBeep: true // iOS
+    }
+    );
+
+}
+        </script>
+
+        <script>
+
+
+           function cameraTakePicture() {
+       navigator.camera.getPicture(onSuccess, onFail, {
+         quality: 50,
+         destinationType: Camera.DestinationType.DATA_URL
+       });
+
+      function onSuccess(imageData) {
+         // var image = document.getElementById('myImage');
+         // alert(imageData);
+         // img.src=imageData;
+         alert("Image taken Sucesfully");
+         submit_immunization();
+
+
+      }
+
+      function onFail(message) {
+         alert('Failed because: ' + message);
+      }
+   }
+
+
+
+    document.getElementById("cameraTakePicture").addEventListener
+     ("click", cameraTakePicture);
+
+             </script>
+
+
+    </body>
+</html>
