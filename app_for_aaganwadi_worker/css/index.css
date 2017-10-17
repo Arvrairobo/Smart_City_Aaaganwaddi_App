@@ -1,0 +1,131 @@
+
+::-webkit-scrollbar {
+
+        display: none;
+    }
+    ::-moz-scrollbar {
+
+        display: none;
+    }
+
+
+#main_screen
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#my_first_screen{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-image: url('loginImage.jpg');
+  background-size: 100% 100%;
+}
+
+#login_screen
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-image: url('after_login.jpg');
+  /*background-color: #ffc400;*/
+
+}
+
+#screen_2
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#leader_board
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+
+#new_student_enroll__screen{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#attendance_screen{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#qr_code_scan_screen{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+ display: none;
+}
+
+#immnization__screen{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#nutrition_level__screen{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+
+.font_class{
+  position: absolute;
+  font-size: 5vw;
+}
+
+.my_box{
+  border-radius: 25%;
+  /*background-color: yellow;
+  */
+}
+
+.rounded{
+  height: 5%;
+  width: 10%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 25px;
+}
