@@ -1,0 +1,62 @@
+#main_screen{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-image: url("gif.gif");
+	display: none;
+}
+
+#second_screen{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+  display: block;
+}
+
+#Attendance_screen{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#record{
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	width: 80%;
+}
+
+#Immunization_screen{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#Supply_screen{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#nutrition_screen_data_anaylytics{
+	position: absolute;
+	top: 0%;
+	left:0%;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+  display: none;
+}
